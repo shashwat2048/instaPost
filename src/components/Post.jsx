@@ -1,9 +1,5 @@
-import { FaHeart } from "react-icons/fa";
-import { FaRegComment } from "react-icons/fa";
+import { FaHeart,FaRegComment, FaRegBookmark, FaBookmark, FaRegHeart} from "react-icons/fa";
 import { LuSend } from "react-icons/lu";
-import { FaRegBookmark } from "react-icons/fa6";
-import { FaBookmark } from "react-icons/fa6";
-import { FaRegHeart } from "react-icons/fa";
 import { useState } from "react";
 import likesfx from "../assets/like.mp3";
 import marksfx from "../assets/mark.mp3";
