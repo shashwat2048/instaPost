@@ -12,11 +12,20 @@ import hoversfx from "../assets/woosh.mp3";
 function Post({post}) {
     const [islike, setLike] = useState(false);
 
+    const [likes, setLikes] = useState(post.likes);
+
     const handleLike = () => {
         setLike(!islike);
         const likeAudio = new Audio(likesfx);
         likeAudio.currentTime = 1;
         likeAudio.play();
+        if(islike){
+            setLikes(likes - 1);
+        }
+        else{
+            setLikes(likes + 1);
+        }
+        
     }
 
     const [isMarked, setIsMarked] = useState(false);
@@ -64,7 +73,7 @@ function Post({post}) {
                     </button>
                 </div>
                 {/* post footer likes */}
-                <p className="font-semibold text-sm">{post.likes} likes</p>
+                <p className="font-semibold text-sm">{likes} likes</p>
                 <p className="text-sm"><span className="font-semibold">{post.username}</span> {post.caption}</p>
                 <p className="text-sm text-gray-400">
                     {post.comments.length === 0 ? <p className="text-gray-400">No comments yet</p> : <p className="text-gray-400">View all comments</p>}
