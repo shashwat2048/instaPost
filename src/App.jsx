@@ -43,10 +43,10 @@ const postDetails = [
 function App() {
   
   return (
-    <div className="flex gap-[40px] items-center justify-center w-screen h-screen bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888]">
-      {postDetails.map(post => (
-        <Post key={post.id} post={post} />
-      ))}
+    <div className="flex flex-col overflow-y-auto md:flex-row gap-[40px] p-[20px] items-center justify-start md:justify-center w-[100vw] h-[100dvh] bg-gradient-to-tr from-[#f09433] via-[#e6683c] via-[#dc2743] via-[#cc2366] to-[#bc1888]" >
+        {postDetails.map(post => (
+          <Post key={post.id} post={post} />
+        ))}
     </div>
 
   )
